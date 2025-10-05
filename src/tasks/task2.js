@@ -5,7 +5,23 @@
  * от 1 до userInput, кратных трём, через запятую с пробелом
  */
 export function getMultiplesOfThree(userInput) {
-  let result = "";
+ if (userInput === null) {
+    throw new Error("Пользователь отменил ввод");
+  }
 
-  return result;
+  if (isNaN(userInput)) {
+    throw new Error("Некорректные входные данные");
+  }
+
+  let result = "";
+  let a = '';
+  let i = 1;
+  while (i < userInput) {
+    i++;
+    if (i % 3 === 0) {
+      a += i + ", ";
+      result = a.slice(0, -2);
+    }
+  }
+   return result;
 }
