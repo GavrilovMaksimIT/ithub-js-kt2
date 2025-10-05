@@ -5,7 +5,7 @@
  * от 1 до userInput, кратных трём, через запятую с пробелом
  */
 export function getMultiplesOfThree(userInput) {
- if (userInput === null) {
+  if (userInput === null) {
     throw new Error("Пользователь отменил ввод");
   }
 
@@ -14,7 +14,7 @@ export function getMultiplesOfThree(userInput) {
   }
 
   let result = "";
-  let a = '';
+  let a = "";
   let i = 1;
   while (i < userInput) {
     i++;
@@ -23,5 +23,5 @@ export function getMultiplesOfThree(userInput) {
       result = a.slice(0, -2);
     }
   }
-   return result;
+  return result;
 }
